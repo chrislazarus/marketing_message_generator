@@ -59,3 +59,16 @@ if st.button("Generate Marketing Copy"):
     st.write(caption)
     st.subheader("Image Description:")
     st.write(image_description)
+
+# Define your image generation parameters
+prompt = image_description
+response = openai.Image.create(
+  prompt=prompt,
+  n=1,  # Number of images to generate (maximum of 1 for DALL-E 3)
+  size="1024x1024"  # Image size (options: 1024x1024, 1024x1792, 1792x1024 for DALL-E 3)
+)
+
+# Get the image URL
+image_url = response['data'][0]['url']
+print(image_url)
+
