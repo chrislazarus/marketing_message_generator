@@ -60,9 +60,8 @@ if st.button("Generate Marketing Copy"):
     st.subheader("Image Description:")
     st.write(image_description)
     # Define your image generation parameters
-    prompt = image_description
     response = openai.Image.create(
-    prompt=prompt,
+    prompt=image_description,
     n=1,  # Number of images to generate (maximum of 1 for DALL-E 3)
     size="1024x1024"  # Image size (options: 1024x1024, 1024x1792, 1792x1024 for DALL-E 3)
     )
