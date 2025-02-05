@@ -68,5 +68,5 @@ if st.button("Generate Marketing Copy"):
     # Get the image URL
     image_url = response['data'][0]['url']
     # Display the image
-    st.image(image_url, caption='Smart Fridge Pro', use_column_width=True)
+    st.image(image_url, caption='Smart Fridge Pro')
 
