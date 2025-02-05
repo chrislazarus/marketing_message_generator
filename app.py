@@ -67,5 +67,5 @@ if st.button("Generate Marketing Copy"):
     )
     # Get the image URL
     image_url = response['data'][0]['url']
-    print(image_url)
+    st.write(image_url)
 
